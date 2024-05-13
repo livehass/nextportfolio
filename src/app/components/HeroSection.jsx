@@ -11,28 +11,29 @@ const HeroSection = () => {
         <div className="col-span-7 place-self-center text-center sm:text-left">
           <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to bg-pink-600">
-              Hello, I'm{""}{" "}
+              Hello, I&apos;m{" "}
             </span>
-            <br />
+            <br></br>
             <TypeAnimation
               sequence={[
-                "Jorge",
+                "Jorge Felipe",
                 1000,
                 "Fullstack Developer",
                 1000,
-                "Java Spring Boot",
+                "Java Spring ",
                 1000,
-                "React + Typescript",
+                "React Typescript",
                 1000,
               ]}
               wrapper="span"
-              speed={50}
+              speed={30}
               repeat={Infinity}
             />
           </h1>
+
           <p className="text-[#ADB7DE] text-base  sm:text-lg mb-6 lg:text-xl">
             A passionate fullstack developer focused in create front end apps in
-            react and backend with java spring.s
+            react and backend with java spring
           </p>
           <div>
             <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 hover:bg-slate-200 text-white bg-gradient-to-br from-blue-500 via-purple-600 to bg-green-500">

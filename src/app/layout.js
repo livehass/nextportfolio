@@ -15,7 +15,8 @@ export default function RootLayout({ children }) {
       <head>
         {/* <link rel="icon" href="https://www.youtube.com/s/desktop/7c0eb0c2/img/favicon_32x32.png" sizes="any" /> */}
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>{children}
+      </body>
     </html>
   );
 }
