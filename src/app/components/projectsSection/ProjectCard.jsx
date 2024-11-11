@@ -1,34 +1,90 @@
-import React from "react";
-import { CodeBracketIcon, EyeIcon } from "@heroicons/react/24/outline";
-import Link from "next/link";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 
-const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
+const ProjectCard = ({
+  imgUrl,
+  title,
+  description,
+  gitUrl,
+  previewUrl,
+  technologies,
+}) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const toggleExpand = () => {
+    setIsExpanded((prev) => !prev);
+  };
+
   return (
-    <div>
-      <div
-        className="h-52 md:h-72 rounded-t-xl relative group"
-        style={{ background: `url(${imgUrl})`, backgroundSize: "cover" }}
-      >
-        <div className="overlay items-center justify-center absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80 transition-all duration-500 ">
-          <Link
-            href={gitUrl}
-            className="h-14 w-14 mr-4 border-2 relative rounded-full border-[#ADB7BE] hover:border-white group/link"
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      transition={{ duration: 1.3 }}
+      variants={{
+        visible: { opacity: 1, scale: 1 },
+        hidden: { opacity: 0, scale: 0 },
+      }}
+      className="flex flex-col bg-[#18191E] border-[#33353F] border-2 shadow-sm rounded-lg w-94"
+      style={{ minHeight: "400px" }}
+    >
+      <div className="relative h-56 m-2.5 overflow-hidden rounded-md">
+        <img src={imgUrl} alt="card-image" />
+      </div>
+      <div className="p-4 flex-grow flex flex-col justify-between">
+        <div>
+          <div className="flex items-center">
+            <h6 className="text-white text-xl font-semibold">{title}</h6>
+          </div>
+          <p
+            className={`text-slate-400 leading-normal font-light ${
+              isExpanded ? "" : "line-clamp-3"
+            }`}
           >
-            <CodeBracketIcon className="h-10 w-10 text-[#ADB7BE] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer group-hover/link:text-white" />
-          </Link>
-          <Link
+            {description}
+          </p>
+
+          <button
+            onClick={toggleExpand}
+            className="text-blue-500 hover:text-blue-400 mt-2"
+          >
+            {isExpanded ? "See less" : "Read more"}
+          </button>
+        </div>
+
+        <div className="flex flex-wrap items-center justify-center gap-2 my-3">
+          {technologies &&
+            technologies.map((tech) => (
+              <div key={tech.id} className="group inline-flex">
+                <button
+                  className="rounded-full pointer-events-none border border-white p-2.5 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-slate-800 hover:border-slate-800 focus:text-white focus:bg-slate-800 focus:border-slate-800 active:border-slate-800 active:text-white active:bg-slate-800 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                  type="button"
+                >
+                  <img src={tech.logo} alt={tech.name} className="w-4 h-4" />
+                </button>
+              </div>
+            ))}
+        </div>
+
+        <div className="flex flex-col space-y-2 mt-auto">
+          <a
             href={previewUrl}
-            className="h-14 w-14 border-2 relative rounded-full border-[#ADB7BE] hover:border-white group/link"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-md bg-slate-800 py-2 px-4 text-center text-sm text-white transition-all shadow-md hover:shadow-lg hover:bg-slate-700"
           >
-            <EyeIcon className="h-10 w-10 text-[#ADB7BE] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer group-hover/link:text-white" />
-          </Link>
+            Live Preview
+          </a>
+          <a
+            href={gitUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-md py-2 px-4 text-center text-sm text-white bg-secondary-500 transition-all shadow-md hover:shadow-lg hover:bg-slate-700"
+          >
+            View on GitHub
+          </a>
         </div>
       </div>
-      <div className="text-white rounded-b-xl mt-3 bg-[#181818] px-4">
-        <h5 className="text-xl font-semibold mb-2">{title}</h5>
-        <p className="text-[#ADB7BE]">{description}</p>
-      </div>
-    </div>
+    </motion.div>
   );
 };
 
