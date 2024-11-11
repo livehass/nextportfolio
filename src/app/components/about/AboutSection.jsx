@@ -112,7 +112,7 @@ const AboutSection = () => {
             transition={{ delay: 0.3 }}
             className="text-base  leading-relaxed lg:text-lg flex-grow overflow-hidden"
           >
-            I am a full-stack web developer passionate about building
+            I&apos;am a full-stack web developer passionate about building
             interactive, responsive applications. My skills include JavaScript,
             React, Redux, Node.js, Express, PostgreSQL, and Git. I specialize in
             front-end development, focusing on creating seamless user

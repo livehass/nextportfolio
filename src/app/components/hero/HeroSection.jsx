@@ -34,7 +34,7 @@ const HeroSection = () => {
               variants={itemVariants}
               className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600"
             >
-              Hello, I'm
+              Hello, I&apos;m
             </motion.span>
             <br></br>
             <TypeAnimation
