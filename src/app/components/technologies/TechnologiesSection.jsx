@@ -85,7 +85,7 @@ const TechnologiesSection = () => {
           transition={{ duration: 0.5 }}
           className="text-center text-3xl font-bold  mt-10  text-transparent bg-clip-text bg-white"
         >
-          Technologies I'm Familiar With
+          Technologies I&apos;m Familiar With
         </motion.h1>
         <motion.div
           initial={{ opacity: 0, scale: 0.1 }}

@@ -116,11 +116,11 @@ const AboutSection = () => {
             interactive, responsive applications. My skills include JavaScript,
             React, Redux, Node.js, Express, PostgreSQL, and Git. I specialize in
             front-end development, focusing on creating seamless user
-            experiences. I’m well-versed in agile methodologies, which help me
-            deliver projects efficiently and collaborate effectively with teams.
-            I’m a quick learner who thrives in collaborative environments and am
-            eager to contribute to impactful projects. Let’s build something
-            amazing together!
+            experiences. I&apos;m well-versed in agile methodologies, which help
+            me deliver projects efficiently and collaborate effectively with
+            teams. I&apos;m a quick learner who thrives in collaborative
+            environments and am eager to contribute to impactful projects.
+            Let&apos;s build something amazing together!
           </motion.p>
 
           <motion.div

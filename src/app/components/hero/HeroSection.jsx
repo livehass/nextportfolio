@@ -60,8 +60,9 @@ const HeroSection = () => {
             variants={itemVariants}
             className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl text-wrap lg:mr-20 md:mr-20 md:pr-20"
           >
-            I'm a full-stack developer passionate about building front-end apps
-            with React and back-end solutions with Java Spring and TypeScript.
+            I&apos;m a full-stack developer passionate about building front-end
+            apps with React and back-end solutions with Java Spring and
+            TypeScript.
           </motion.p>
           <div>
             <a
