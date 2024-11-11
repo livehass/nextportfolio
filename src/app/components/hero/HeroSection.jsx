@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 
@@ -35,7 +34,7 @@ const HeroSection = () => {
               variants={itemVariants}
               className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600"
             >
-              Hello, I&apos;m
+              Hello, I'm
             </motion.span>
             <br></br>
             <TypeAnimation
@@ -98,7 +97,7 @@ const HeroSection = () => {
             transition={{ type: "spring", stiffness: 30 }}
             className="rounded-full  w-[400px] h-[400px] lg:w-[400px] lg:h-[400px] md:w-[300px] md:h-[300px] md:block lg:block"
           >
-            <Image
+            <img
               className="absolute z-10 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-full "
               src="/images/9482519.svg"
               alt="hero image"
