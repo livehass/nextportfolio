@@ -3,6 +3,7 @@
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const visible = { opacity: 1, y: 0, transition: { duration: 0.5 } };
 
@@ -18,10 +19,10 @@ const HeroSection = () => {
       animate="visible"
       exit={{ opacity: 0, transition: { duration: 1 } }}
       variants={{ visible: { transition: { staggerChildren: 0.3 } } }}
-      className=" lg:pl-20 lg:ml-20 md:ml-5 "
+      className="lg:pl-20 lg:ml-20 md:ml-5"
       id="home"
     >
-      <div className="grid grid-cols-1 sm:grid-cols-12 ">
+      <div className="grid grid-cols-1 sm:grid-cols-12">
         <div className="col-span-8 place-self-center text-center sm:text-left justify-self-start">
           <motion.h1
             initial={{ x: "100%" }}
@@ -36,7 +37,7 @@ const HeroSection = () => {
             >
               Hello, I&apos;m
             </motion.span>
-            <br></br>
+            <br />
             <TypeAnimation
               className="sm:h-full"
               sequence={[
@@ -70,14 +71,14 @@ const HeroSection = () => {
             >
               <motion.button
                 variants={itemVariants}
-                className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 hover:bg-slate-200 text-white bg-gradient-to-br from-primary-500 via-secondary-600 to bg-secondary-500"
+                className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 hover:bg-slate-200 text-white bg-gradient-to-br from-primary-500 via-secondary-600 to-secondary-500"
               >
                 Hire Me
               </motion.button>
             </a>
             <motion.button
               variants={itemVariants}
-              className="px-1 py-1 w-full sm:w-fit rounded-full bg-transparent hover:bg-slate-800 text-white mt-3 bg-gradient-to-br from-primary-500 via-secondary-600 to bg-secondary-500"
+              className="px-1 py-1 w-full sm:w-fit rounded-full bg-transparent hover:bg-slate-800 text-white mt-3 bg-gradient-to-br from-primary-500 via-secondary-600 to-secondary-500"
             >
               <a
                 href="/curriculum/curriculum-Jorge-Felipe.pdf"
@@ -95,16 +96,16 @@ const HeroSection = () => {
             animate={{ x: -100, opacity: 1 }}
             exit={{ opacity: 1, transition: { duration: 10 } }}
             transition={{ type: "spring", stiffness: 30 }}
-            className="rounded-full  w-[400px] h-[400px] lg:w-[400px] lg:h-[400px] md:w-[300px] md:h-[300px] md:block lg:block"
+            className="rounded-full w-80 h-80 lg:w-[400px] lg:h-[400px] md:w-[300px] md:h-[300px] md:block lg:block"
           >
-            <img
-              className="absolute z-10 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-full "
+            <Image
+              className="absolute z-10 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-full"
               src="/images/9482519.svg"
               alt="hero image"
               width={380}
               height={380}
             />
-            <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-secondary-900 to-transparent rounded-full lg:w-[400px] lg:h-[400px] h-80 w-80 z-1 blur-lg absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 animate-pulse"></div>
+            <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-secondary-900 to-transparent rounded-full w-80 h-80 lg:w-[400px] lg:h-[400px] z-1 blur-lg absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 animate-pulse"></div>
           </motion.div>
         </div>
       </div>
