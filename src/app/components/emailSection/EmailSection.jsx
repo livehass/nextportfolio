@@ -102,7 +102,7 @@ const EmailSection = () => {
           transition={{ delay: 1 }}
           className="socials flex flex-row gap-2"
         >
-          <Link href="https://www.github.com/livehass">
+          <Link href="https://github.com/livehass/nextportfolio">
             <Image
               src={GithubIcon}
               alt="Github Icon"
