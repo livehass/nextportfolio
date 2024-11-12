@@ -66,22 +66,26 @@ const ProjectCard = ({
         </div>
 
         <div className="flex flex-col space-y-2 mt-auto">
-          <a
-            href={previewUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-md bg-slate-800 py-2 px-4 text-center text-sm text-white transition-all shadow-md hover:shadow-lg hover:bg-slate-700"
-          >
-            Live Preview
-          </a>
-          <a
-            href={gitUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-md py-2 px-4 text-center text-sm text-white bg-secondary-500 transition-all shadow-md hover:shadow-lg hover:bg-slate-700"
-          >
-            View on GitHub
-          </a>
+          {previewUrl && (
+            <a
+              href={previewUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-md bg-slate-800 py-2 px-4 text-center text-sm text-white transition-all shadow-md hover:shadow-lg hover:bg-slate-700"
+            >
+              Live Preview
+            </a>
+          )}
+          {gitUrl && (
+            <a
+              href={gitUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-md py-2 px-4 text-center text-sm text-white bg-secondary-500 transition-all shadow-md hover:shadow-lg hover:bg-slate-700"
+            >
+              View on GitHub
+            </a>
+          )}
         </div>
       </div>
     </motion.div>

@@ -38,7 +38,6 @@ const projectsData = [
       "The project consists of a list where you can add and delete patients, and determine the BMI (Body Mass Index) of each patient. It utilizes JavaScript, CSS, and HTML to create a dynamic interface. Users can add new patients to the list, providing their weight and height, which are then used to calculate their BMI",
     image: "/projects/2.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
     previewUrl: "https://javascript-web-alura.vercel.app/",
     technologies: [
       {
@@ -66,7 +65,6 @@ const projectsData = [
     image: "/projects/3.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/livehass/LojaDeGamesSpringFramework",
-    previewUrl: "https://github.com/livehass/LojaDeGamesSpringFramework",
     technologies: [
       {
         id: 1,
@@ -127,11 +125,10 @@ const projectsData = [
     id: 5,
     title: "Ecofamily E-comerce",
     description:
-      "A digital e-commerce platform dedicated to selling healthy foods and fostering a growth-oriented community. Developed using front-end and back-end methodologies during the Generation.org bootcamp. ",
+      "A digital e-commerce platform dedicated to selling healthy foods and fostering a growth-oriented community. Contributed to its development using front-end and back-end methodologies during the Generation.org bootcamp.",
     image: "/projects/5.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Generation-ecoFamily",
-    previewUrl: "https://ecofamily.vercel.app/",
     technologies: [
       {
         id: 1,
@@ -169,7 +166,6 @@ const projectsData = [
     image: "/projects/7.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/livehass/personal-goals-app",
-    previewUrl: "https://github.com/livehass/personal-goals-app",
     technologies: [
       {
         id: 1,
