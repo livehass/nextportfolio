@@ -1,4 +1,3 @@
-"use client";
 import React, { useState } from "react";
 import Link from "next/link";
 import NavLink from "./NavLink";
@@ -7,25 +6,12 @@ import MenuOverlay from "./MenuOverlay";
 import { motion } from "framer-motion";
 
 const navLinks = [
-  {
-    title: "About",
-    path: "#about",
-  },
-  {
-    title: "Projects",
-    path: "#projects",
-  },
-  {
-    title: "Contact",
-    path: "#contact",
-  },
-  {
-    title: "Home",
-    path: "#home",
-  },
+  { title: "About", path: "#about" },
+  { title: "Projects", path: "#projects" },
+  { title: "Contact", path: "#contact" },
 ];
-const visible = { opacity: 1, y: 0, transition: { duration: 0.5 } };
 
+const visible = { opacity: 1, y: 0, transition: { duration: 0.5 } };
 const itemVariants = {
   hidden: { opacity: 0, y: 10 },
   visible,
@@ -39,12 +25,12 @@ const NavBar = () => {
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
-      className="fixed top-0 left-0 right-0 z-10 bg-transparent bg-opacity-100"
+      className="fixed mx-auto border-b-2 border-slate-700 top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100"
     >
-      <div className="flex flex-wrap items-center justify-between mx-auto px-4 py-2 mt-5">
+      <div className="flex container lg:py-2 flex-wrap items-center justify-between mx-auto px-4 py-1">
         <Link
           href={"/"}
-          className="text-1xl md:text-2xl font-semibold text-white "
+          className="text-2xl md:text-1xl sm:text-1xl font-semibold text-white "
         >
           <motion.span
             variants={itemVariants}
@@ -54,7 +40,9 @@ const NavBar = () => {
             <span className="text-green-600">{" />"}</span>
           </motion.span>
         </Link>
-        <div className="mobile-menu block md:hidden">
+
+        {/* Botão mobile - aparece apenas em telas menores */}
+        <div className="block md:hidden">
           {!navbarOpen ? (
             <button
               onClick={() => setNavbarOpen(true)}
@@ -71,12 +59,14 @@ const NavBar = () => {
             </button>
           )}
         </div>
+
+        {/* Menu padrão - aparece apenas em telas maiores */}
         <motion.div
           variants={itemVariants}
-          className="menu hidden md:block md:w-auto"
+          className="hidden md:block"
           id="navbar"
         >
-          <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
+          <ul className="flex p-2 md:p-0 md:flex-row md:space-x-8 mt-0">
             {navLinks.map((link, index) => (
               <li key={index}>
                 <NavLink href={link.path} title={link.title} />
@@ -85,12 +75,14 @@ const NavBar = () => {
           </ul>
         </motion.div>
       </div>
-      {navbarOpen ? (
-        <MenuOverlay
-          links={navLinks}
-          closeOverlay={() => setNavbarOpen(false)}
-        />
-      ) : null}
+      {navbarOpen && (
+        <div className="md:hidden">
+          <MenuOverlay
+            links={navLinks}
+            closeOverlay={() => setNavbarOpen(false)}
+          />
+        </div>
+      )}
     </motion.nav>
   );
 };

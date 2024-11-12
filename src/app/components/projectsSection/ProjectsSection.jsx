@@ -202,19 +202,21 @@ const projectsData = [
 ];
 const ProjectsSection = () => {
   const [tag, setTag] = useState("All");
+
   const handleTagChange = (newTag) => {
     setTag(newTag);
   };
   const filteredProjects = projectsData.filter((project) =>
     project.tag.includes(tag)
   );
+
   return (
-    <section id="projects" className="lg:pb-20 lg:mt-20">
-      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-2 md:mb-12 ">
+    <section id="projects" className="md:pt-24 lg:mt-20">
+      <h2 className="text-center text-4xl font-bold text-white mt-4   ">
         My Projects
       </h2>
 
-      <div className="text-white text-center mb-4">
+      <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
         <ProjectTag
           onClick={handleTagChange}
           name="All"

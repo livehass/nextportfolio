@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const NavLink = ({ href, title }) => {
   const scrollToSection = (event) => {
     event.preventDefault();

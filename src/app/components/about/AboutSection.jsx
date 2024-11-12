@@ -68,34 +68,37 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="text-white " id="about">
-      <div className="md:grid md:grid-cols-2 gap-4 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16 md:mt-4">
+    <section
+      className="text-white md:py-20 md:pt-24 lg:pt-1 lg:py-5 sm:my-28 sm:py-28"
+      id="about"
+    >
+      <div className="md:grid md:grid-cols-2 gap-2 items-center  xl:gap-12 xl:px-16 sm:mt-24 lg:mt-24 md:mt-24">
         <motion.div
           variants={itemVariants}
           initial="initial"
           whileInView="animate"
           viewport={{
-            onde: true,
+            once: true,
           }}
           transition={{ delay: 0.1 }}
-          className="rounded-lg h-full flex items-center justify-center"
+          className="rounded-lg sm:rounded md:h-full md:w-full sm:h-1/2 sm:w-1/2 flex items-center justify-center "
         >
           <Image
             src="/images/1.png"
             width="500"
             height="500"
             alt="About Me"
-            className="object-cover h-full rounded-lg"
+            className="object-cover md:h-full md:w-full rounded-lg sm:h-1/2 sm:w-1/2"
           />
         </motion.div>
 
-        <div className="mt-4 md:mt-0 text-left flex flex-col h-full overflow-hidden max-w-2xl mx-auto">
+        <div className="mt-2 md:mt-0 text-left flex flex-col h-full overflow-hidden max-w-2xl mx-auto">
           <motion.h2
             variants={itemVariants}
             initial="initial"
             whileInView="animate"
             viewport={{
-              onde: true,
+              once: true,
             }}
             transition={{ delay: 0.2 }}
             className="text-4xl font-bold text-white mb-4"
@@ -107,7 +110,7 @@ const AboutSection = () => {
             initial="initial"
             whileInView="animate"
             viewport={{
-              onde: true,
+              once: true,
             }}
             transition={{ delay: 0.3 }}
             className="text-base  leading-relaxed lg:text-lg flex-grow overflow-hidden"
@@ -128,10 +131,10 @@ const AboutSection = () => {
             initial="initial"
             whileInView="animate"
             viewport={{
-              onde: true,
+              once: true,
             }}
             transition={{ delay: 0.5 }}
-            className="flex flex-row justify-start space-x-4 mt-4"
+            className="flex flex-row justify-start space-x-2"
           >
             <TabButton
               selectTab={() => handleTabChange("skills")}
@@ -161,10 +164,10 @@ const AboutSection = () => {
             initial="initial"
             whileInView="animate"
             viewport={{
-              onde: true,
+              once: true,
             }}
             transition={{ delay: 0.4 }}
-            className="mt-8 max-h-48 overflow-y-auto"
+            className="mt-8 max-h-48 overflow-y-auto mb-9"
           >
             {TAB_DATA.find((t) => t.id === tab).content}
           </motion.div>

@@ -77,25 +77,23 @@ const TechnologiesSection = () => {
   ];
 
   return (
-    <div className="overflow-hidden">
-      <main className="py-10 flex flex-col items-center">
-        <motion.h1
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="text-center text-3xl font-bold  mt-10  text-transparent bg-clip-text bg-white"
-        >
-          Technologies I&apos;m Familiar With
-        </motion.h1>
-        <motion.div
-          initial={{ opacity: 0, scale: 0.1 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 2.6 }}
-          className="border-b border-secondary-500 sm:flex-row items-center w-3/4 mt-1"
-        ></motion.div>
-        <HorizontalGallery imageArray={imagesArray} />
-      </main>
-    </div>
+    <main className="py-10  flex flex-col items-center overflow-hidden">
+      <motion.h1
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5 }}
+        className="text-center text-3xl font-bold  mt-10  text-transparent bg-clip-text bg-white"
+      >
+        Technologies I&apos;m Familiar With
+      </motion.h1>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.1 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 2.6 }}
+        className="border-b border-secondary-500 sm:flex-row items-center w-3/4"
+      ></motion.div>
+      <HorizontalGallery imageArray={imagesArray} />
+    </main>
   );
 };
 

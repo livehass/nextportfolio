@@ -23,7 +23,7 @@ const TabButton = ({ active, selectTab, children }) => {
         initial="initial"
         whileInView="animate"
         viewport={{
-          onde: true,
+          once: true,
         }}
         transition={{
           rotate: { duration: 1 },

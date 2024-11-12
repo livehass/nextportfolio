@@ -10,9 +10,9 @@ import TechnologiesSection from "./components/technologies/TechnologiesSection";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col  relative z-0 bg-[#121212] scrollbar-hide md:scrollbar-default ">
+    <main className="flex min-h-screen flex-col z-0 bg-[#121212] scrollbar-hide md:scrollbar-default overflow-x-hidden w-full ">
       <NavBar />
-      <div className="container mt-24 mx-auto px-12 py-4 ">
+      <div className="container mt-24 mx-auto px-12 py-4">
         <HeroSection />
         <TechnologiesSection />
         <AboutSection />
@@ -22,5 +22,6 @@ export default function Home() {
       <Footer />
       <ParticlesComponent id="particles" />
     </main >
+
   );
 }

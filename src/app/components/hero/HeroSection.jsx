@@ -19,7 +19,7 @@ const HeroSection = () => {
       animate="visible"
       exit={{ opacity: 0, transition: { duration: 1 } }}
       variants={{ visible: { transition: { staggerChildren: 0.3 } } }}
-      className="lg:pl-20 lg:ml-20 md:ml-5"
+      className="md:py-20 md:pt-24 lg:pt-0 lg:py-0 sm:my-10 sm:py-10"
       id="home"
     >
       <div className="grid grid-cols-1 sm:grid-cols-12">
@@ -29,7 +29,7 @@ const HeroSection = () => {
             animate={{ x: -4 }}
             exit={{ opacity: 0, transition: { duration: 1 } }}
             transition={{ type: "spring", stiffness: 50 }}
-            className="text-white mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold"
+            className="text-white mb-4 text-4xl sm:text-4xl md:text-5xl lg:text-7xl lg:leading-normal font-extrabold"
           >
             <motion.span
               variants={itemVariants}
@@ -39,7 +39,7 @@ const HeroSection = () => {
             </motion.span>
             <br />
             <TypeAnimation
-              className="sm:h-full"
+              className="sm:w-full"
               sequence={[
                 "Jorge Felipe",
                 800,
@@ -47,7 +47,9 @@ const HeroSection = () => {
                 800,
                 "Java Spring ",
                 800,
-                "React Typescript",
+                "React",
+                800,
+                "Typescript",
                 800,
               ]}
               wrapper="span"

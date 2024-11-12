@@ -10,11 +10,12 @@ const HorizontalGallery = ({ imageArray }) => {
   };
 
   return (
-    <ul className="overflow-hidden mb-20">
+    <ul className="overflow-hidden">
       {items.map((item, i) => (
         <motion.li
           key={i}
-          className="flex items-center text-center space-x-8  scrollbar-none overflow-hidden  mx-20 px-20 "
+          className="flex items-center text-center space-x-8  scrollbar-none overflow-hidden  mx-20 sm:mx-auto px-20 sm-
+       sm:px-0  sm:grid sm:grid-cols-4 sm:gap-2 md:flex"
           variants={itemVariants}
           initial="initial"
           animate="animate"
@@ -23,7 +24,7 @@ const HorizontalGallery = ({ imageArray }) => {
           {imageArray.map((image) => (
             <div
               key={image.id}
-              className="flex flex-col items-center w-10  group"
+              className="flex flex-col items-center w-10 sm:-5  group"
             >
               <span className="flex justify-center text-center mb-1 text-sm  uppercase opacity-0 group-hover:opacity-100 transition-opacity bg-secondary-500 group-hover:text-white antialiased font-bold px-0.5 duration-100">
                 {image.alt || `Image ${image.id}`}
