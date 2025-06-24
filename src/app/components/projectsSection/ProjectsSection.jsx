@@ -193,6 +193,32 @@ const projectsData = [
         name: "Fastfy",
         logo: "https://raw.githubusercontent.com/livehass/files/refs/heads/master/logos-portfolio/fastfy.svg",
       },
+      {
+    id: 7,
+    title: "XP Calculator up to Paragon 300 - Diablo 4",
+    description:
+      "A web-based XP calculator for Diablo 4 that helps players estimate the experience required to reach Paragon level 300. Users input their current level, the XP gained per Pit run, and the time per run. The tool outputs the remaining XP needed, the number of Pit runs required, and the total time to reach the goal.",
+    image: "/projects/8.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/livehass/Calculadora-de-XP-Paragon-300--Diablo4",
+    previewUrl: "https://calculadora-de-xp-paragon-300-diabl.vercel.app/",
+    technologies: [
+         {
+        id: 1,
+        name: "JavaScript",
+        logo: "https://raw.githubusercontent.com/livehass/files/refs/heads/master/logos-portfolio/javascriptlogo.svg",
+      },
+      {
+        id: 2,
+        name: "HTML",
+        logo: "https://raw.githubusercontent.com/livehass/files/refs/heads/master/logos-portfolio/html5_white.svg",
+      },
+      {
+        id: 3,
+        name: "CSS",
+        logo: "https://raw.githubusercontent.com/livehass/files/refs/heads/master/logos-portfolio/css3-white.svg",
+      },
+      
     ],
   },
 ];
