@@ -220,9 +220,8 @@ const projectsData = [
         name: "CSS",
         logo: "https://raw.githubusercontent.com/livehass/files/refs/heads/master/logos-portfolio/css3-white.svg",
       },
-       
-    },
-  ],
+    ],  
+  },
 ];
 const ProjectsSection = () => {
   const [tag, setTag] = useState("All");
