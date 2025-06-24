@@ -193,6 +193,7 @@ const projectsData = [
         name: "Fastfy",
         logo: "https://raw.githubusercontent.com/livehass/files/refs/heads/master/logos-portfolio/fastfy.svg",
       },
+    ],    
       {
     id: 7,
     title: "XP Calculator up to Paragon 300 - Diablo 4",
